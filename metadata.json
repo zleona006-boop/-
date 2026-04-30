@@ -1,0 +1,13 @@
+{
+  "name": "错题宝 (Smart Error Workbook)",
+  "description": "AI-powered error question book that recognizes mistakes, generates similar practice questions (举一反三), and exports printable PDFs.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "AI OCR",
+    "Analogous Problem Generation",
+    "PDF Export",
+    "Cloud Storage"
+  ]
+}

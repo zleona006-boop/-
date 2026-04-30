@@ -1,0 +1,33 @@
+{
+  "entities": {
+    "ErrorRecord": {
+      "title": "Error Record",
+      "description": "A record of an error question and its AI-generated analogous questions.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "originalText": { "type": "string" },
+        "knowledgePoint": { "type": "string" },
+        "variations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "question": { "type": "string" },
+              "answer": { "type": "string" },
+              "analysis": { "type": "string" }
+            }
+          }
+        },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "originalText", "knowledgePoint", "variations", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/errorRecords/{recordId}": {
+      "schema": "ErrorRecord",
+      "description": "User mistake records and their generated variations."
+    }
+  }
+}

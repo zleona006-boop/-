@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-natural-bg: #F8F7F2;
+  --color-natural-primary: #5A5A40;
+  --color-natural-text: #4A4A35;
+  --color-natural-border: #E5E2D9;
+  --color-natural-accent: #D15E3C;
+  --color-natural-muted: #8A8A7A;
+}
+
+@layer base {
+  body {
+    -webkit-tap-highlight-color: transparent;
+    @apply bg-natural-bg text-natural-text;
+  }
+}
+
+.natural-card {
+  @apply bg-white border border-natural-border rounded-2xl shadow-sm;
+}
+
+.natural-button-primary {
+  @apply bg-natural-primary text-white rounded-full transition-all hover:opacity-90 active:scale-95 px-6 py-2 shadow-sm font-medium;
+}
+
+.natural-button-secondary {
+  @apply border border-natural-primary text-natural-primary rounded-full transition-all hover:bg-natural-primary/5 active:scale-95 px-6 py-2 font-medium;
+}
+
+.markdown-body {
+  @apply leading-relaxed text-slate-700 font-serif;
+}
+
